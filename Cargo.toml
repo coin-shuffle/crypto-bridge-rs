@@ -1,0 +1,26 @@
+[package]
+name = "rsa_crypto"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "rsa_crypto"
+crate-type = ["staticlib", "cdylib"]
+
+[dependencies]
+rsa = { version = "0.8.1"  }
+ethers = "1.0.2"
+futures = "0.3.1"
+open-fastrlp = "0.1.4"
+
+[dependencies.ethers-signers]
+git = "https://github.com/gakonst/ethers-rs.git"
+branch = "master"
+
+[dependencies.coin-shuffle-core]
+git = "ssh://git@github.com/coin-shuffle/core.git"
+branch = "develop"
+
+[dependencies.ethers-core]
+git = "https://github.com/gakonst/ethers-rs.git"
+branch = "master"
